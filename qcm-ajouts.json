@@ -560,6 +560,666 @@
           ", la racine proct(o)- renvoie à l'anus. Par exemple, une proctalgie désigne une douleur anale."
         ]
       ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Maladie et médicalisation",
+      "q": "Un patient se rend chez le médecin pour une prise de sang de routine qui révèle une infection bactérienne asymptomatique. Cette infection lui provoque de l’anxiété qui l’empêche de reprendre le travail, bien que son état clinique n’exige pas d’arrêt. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Selon le concept de la disease, ce patient n’est pas malade.",
+          0,
+          ", il est malade car bien que l’infection bactérienne soit asymptomatique, disease se base sur une dysfonctionnement biologique et non des symptômes."
+        ],
+        [
+          "Dire que le patient devrait reprendre le travail relève nécessairement d’un fait médical.",
+          0,
+          ", le fait de dire que le patient « devrait » représente un jugement de valeur, et cela revient à exclure la dimension normative de la situation."
+        ],
+        [
+          "Les termes sickness et illness permettent de distinguer respectivement le fait d’être malade et de se sentir malade.",
+          0,
+          ", sickness et illness permettent de distinguer respectivement le fait d’être un malade et de se sentir malade. Le fait d’être malade relève de disease."
+        ],
+        [
+          "Affirmer que l’état clinique de ce patient ne justifie pas un arrêt de travail constitue un jugement de valeur.",
+          0,
+          ", cette affirmation représente un fait car elle se base sur des données cliniques, elle relève donc de faits observables, indépendamment des valeurs."
+        ],
+        [
+          "Le fait que l’anxiété du patient l’empêche de reprendre le travail relève de sickness ainsi que d’illness.",
+          1,
+          "."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Maladie et médicalisation",
+      "q": "Situation 1 : Une patiente, Mme Dubois, se présente chez le médecin pour de forts maux de tête répétitifs et une fatigue constante, qui lui rendent la vie difficile. Les différents examens complémentaires n’ont montré aucun souci physiologique particulier. Situation 2 : M. Lopez a réalisé un bilan sanguin comme à son habitude, pour vérifier que tout va bien, même quand il ne ressent aucun souci. Les résultats montrent cependant un taux anormal de CRP dans son sang (on confirmera par la suite une infection). Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "La situation 1 est une situation qui illustre la notion de normativisme.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "La situation 1 est une situation qui illustre la notion de naturalisme.",
+          0,
+          ", le naturalisme correspond à un concept qui “justifie” une condition, maladie, dès lors que l’on constate un dysfonctionnement biologique (un fait) ; l’aspect subjectif/axiologique vient en second lieu."
+        ],
+        [
+          "La situation 2 est une situation qui illustre la notion de naturalisme, puisque le “problème” du patient résulte d’un dysfonctionnement biologique (taux de CRP anormal) sans ressenti de souffrance particulière.",
+          1,
+          ", ici on constate un fait, dysfonctionnement, même si le patient n’en éprouve pas de souffrance particulière."
+        ],
+        [
+          "A notre époque actuelle, nous ne pouvons pas reprocher à la médecine d’être trop normativiste ou naturaliste, dans diverses situations.",
+          0,
+          ", il y a encore de nombreux cas limites, et controversés."
+        ],
+        [
+          "La souffrance vécue par Mme Dubois (situation 1) est une valeur.",
+          1,
+          ", ici la souffrance est propre à la patiente, elle a un côté subjectif (ce qui se rapporte à une valeur)."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Maladie et médicalisation",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Aya)",
+      "inv": 0,
+      "p": [
+        [
+          "La reconnaissance d’un état comme maladie peut avoir des conséquences économiques, sociales et juridiques.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Une société considère progressivement un comportement auparavant jugé normal comme une maladie nécessitant une prise en charge médicale : il s’agit d’un phénomène de pathologisation.",
+          1,
+          ", la pathologisation consiste à faire entrer un phénomène dans le domaine médical en le considérant comme pathologique."
+        ],
+        [
+          "La médicalisation définit la maladie par le fait plutôt que par la valeur.",
+          0,
+          ", la médicalisation repose sur des valeurs sociales, et non uniquement sur des faits objectifs."
+        ],
+        [
+          "La médicalisation peut servir de contrôle social des comportements déviants, en les faisant entrer dans le champ médical afin de contribuer au maintien de l’ordre social.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Toute médicalisation implique nécessairement une pathologisation.",
+          0,
+          ", la pathologisation est une forme particulière de médicalisation : toute médicalisation n’implique donc pas une pathologisation."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) inexactes ? (AUGRIS)",
+      "inv": 1,
+      "p": [
+        [
+          "Le retrait du diagnostic d'hystérie des manuels de psychiatrie illustre la démédicalisation des troubles psychosomatique chez la femme.",
+          1,
+          ", le diagnostic de l’hystérie est faux et obsolète néanmoins ce n’est pas pour autant que l’on arrête de prendre en charge les trouble psychosomatique autres et vérifié de la femme."
+        ],
+        [
+          "Orthorexie, le fait d’avoir une obsession pour l'hygiène de vie notamment alimentaire ne rentre pas dans le cadre de TCA, mais illustre la frontière avec la maladie.",
+          0,
+          ", pareil que l’éco anxiété c’est pas considéré selon les classifications comme une maladie néanmoins elle peut être source de souffrance pour la personne."
+        ],
+        [
+          "Selon les classifications psychiatriques, le processus psychique suite à la perte d'un proche est considéré comme physiologique tant que ses manifestations n'excèdent pas six mois.",
+          1,
+          ", il n’y a pas de seuil sur lequel se baser pour dire si le deuil doit être fini, cela est propre à chacun."
+        ],
+        [
+          "Le certificat prénuptial (un bilan médical, la prévention obstétricale et l'information des futurs époux) instauré en 1942 entre dans le cadre de dépistage nécessaire.",
+          1,
+          ", c’est une loi qui se rapporte à de l’eugénisme médical, instauré sous le régime de Vichy afin de contrôler médicalement la population, elle a été abrogée en 2008."
+        ],
+        [
+          "L'évolution des classifications (comme le DSM ou la CIM) démontre que le périmètre de la maladie est défini de manière strictement autonome et interne à la communauté médicale.",
+          1,
+          ", le contexte social des populations joue un rôle majeur pour l'évolution des classifications."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Une patiente inconsciente doit subir une intervention urgente. Le médecin intervient alors pour lui sauver la vie, mais sa famille lui apprend ensuite que la patiente avait exprimé son refus de cette intervention, sans pour autant laisser de trace écrite. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Selon l’éthique conséquentialiste, si l’intervention a sauvé la vie de la patiente alors le médecin a moralement bien agi, car son intention était bonne.",
+          0,
+          ", le fait que le médecin ait de bonnes intentions, ne défini pas si son action est morale ou non car l’éthique conséquentialiste se localise sur les conséquences et non pas sur l’intention."
+        ],
+        [
+          "La morale est une réflexion sur les principes et les valeurs qui permettent de justifier une certaine conduite dans une situation donnée.",
+          0,
+          ", c’est l’éthique qui cherche à réfléchir aux raisons qui permettent de justifier une conduite. La moral est un ensemble collectif de règles, mais ne se pose pas la question de ce qui définit la validité d’une action"
+        ],
+        [
+          "La présence d’un conflit entre plusieurs valeurs signifie que le droit ne permet pas de déterminer la conduite à adopter.",
+          0,
+          ", la présence d’un conflit de valeurs ne représente pas forcément une absence de règle juridique. Une règle juridique peut laisser subsister une question éthique sur ce qui est moralement préférable selon la situation."
+        ],
+        [
+          "Selon une approche conséquentialiste, le respect du refus de la patiente ne constitue pas une obligation absolue.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Une conduite médicalement justifiable peut tout de même faire l’objet d’une discussion éthique.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Parmi les propositions suivantes, relatives à l’éthique de la vertu, laquelle (lesquelles) est (sont) exactes ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "C’est un courant de pensée que l’on ne met plus en application de nos jours.",
+          0,
+          ", on l’applique de nos jours, (c’est une éthique qui a évolué et qui s’est renouvelée)."
+        ],
+        [
+          "On retrouve une réflexion propre au caractère moral de l’agent, c’est-à-dire, est-ce qu’il agit bien ou mal.",
+          1,
+          ", c’est la définition du cours."
+        ],
+        [
+          "L’éthique de la vertu n’est pas un cheminement qui s’apprend de manière progressive, elle est innée.",
+          0,
+          ", c’est justement par l’apprentissage et l’expérience face à différentes situations que l’on apprend à appliquer un raisonnement éthique et adapté face à des circonstances spécifiques."
+        ],
+        [
+          "L’éthique de la vertu nous conduit à agir selon un idéal moral, il n’est pas question de rechercher un juste milieu.",
+          0,
+          ", l’éthique de la vertu recherche justement le juste milieu."
+        ],
+        [
+          "Un médecin hésite entre plusieurs traitements pour son patient âgé polypathologique. Il évalue la situation pour choisir quelle décision est la plus adaptée (à l’instant T) pour son patient, au lieu d’appliquer une règle générale. Ce cheminement de pensée illustre la phronesis.",
+          1,
+          ", ici le médecin se demande quel traitement est le plus adapté : il fonde sa réflexion autour de la situation précise de son patient pour trouver la meilleure issue pour lui ; il n’applique pas bêtement des connaissances dans le but de suivre une règle fixe."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Parmi les propositions suivantes relatives à l’éthique déontologique kantienne, laquelle (lesquelles) est (sont) exacte(s) ? (Aya)",
+      "inv": 0,
+      "p": [
+        [
+          "D’après Kant, une action est moralement bonne lorsque l’individu accomplit librement ce qu’il doit faire.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Deux actions ayant exactement le même résultat possèdent nécessairement la même valeur morale.",
+          0,
+          ", un même résultat peut avoir une valeur morale différente selon l’intention à l’origine de l’action."
+        ],
+        [
+          "L’autonomie morale désigne l’absence de toute règle ou contrainte dans la conduite de l’individu.",
+          0,
+          ", l’autonomie consiste à se donner à soi-même sa propre règle, et non à agir sans aucune règle."
+        ],
+        [
+          "Une règle qui ne peut s’appliquer que dans certaines circonstances peut néanmoins constituer une obligation morale universelle chez Kant.",
+          0,
+          ", une obligation morale doit être universalisable, donc valable pour tous et dans tous les cas."
+        ],
+        [
+          "Le caractère contraignant du devoir moral repose notamment sur son caractère rationnel.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Une jeune patiente de 17 ans présente une glycémie élevée. Plusieurs médecins discutent du diagnostic probable et du traitement à adopter. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? Victoire",
+      "inv": 0,
+      "p": [
+        [
+          "Puisque la glycémie est mesurable objectivement, le diagnostic du diabète relève du fait et ne comporte pas d’autres dimensions.",
+          0,
+          ", la glycémie est un fait objectif mais définir ce qui est pathologique peut également faire intervenir des valeurs."
+        ],
+        [
+          "Dire qu’une glycémie élevée est indésirable et nécessite une prise en charge associe un constat factuel à un jugement de valeur.",
+          1,
+          ", la glycémie est un fait tandis que la considérer indésirable fait intervenir des valeurs."
+        ],
+        [
+          "Le chef de service expose son point de vue et ses idées de façon sincère, l’éthique de la discussion est respectée.",
+          0,
+          ", dans l’éthique de la discussion, il faut respecter 2 règles: la sincérité et la symétrie de parole. Or, le chef de service est le seul à exposer ses idées, ce n’est pas symétrique."
+        ],
+        [
+          "Si les participants de la discussion abandonnent leur position de départ, on peut tout de même dire que la décision finale est un consensus.",
+          1,
+          ", le consensus est une décision à laquelle les participants peuvent tous adhérer après discussion même si ce n’est pas leur position initiale"
+        ],
+        [
+          "Si les participants de la discussion cèdent aux arguments du chef de service même s’ils ne sont pas d’accord, on peut dire que la décision finale est un compromis.",
+          0,
+          ", un compromis est une décision intermédiaire entre plusieurs positions initiales."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (AUGRIS)",
+      "inv": 0,
+      "p": [
+        [
+          "Les cliniques privées dans leur modèle économique entraînent une sélection des patients mais également une médecine à deux vitesses s'opposant aux principes de Justice du principlisme.",
+          1,
+          ", au sens voulu et définition donné par Beauchamp et Childress de justice distributive."
+        ],
+        [
+          "La loi Kouchner de 2002 sur l’autonomie du patient dans son choix de soin s’efface dès lors que le traitement peut sauver le patient.",
+          0,
+          ", justement elle s’oppose au paternalisme médical."
+        ],
+        [
+          "L'administration d'un traitement anticancéreux lourd et douloureux, dans un but curatif, illustre une situation où le principe de bienfaisance justifie une atteinte transitoire au principe de non malfaisance.",
+          1,
+          ", même si discutable le traitement lourd si il est curatif aura un bénéfice plus important que les effets indésirable, peut être remis en cause par le patient ou concertations."
+        ],
+        [
+          "Le principlisme crée un cadre commun néanmoins dans des situation difficile, le médecin aura la décision finale de manière unilatéral étant donné son bagage scientifique.",
+          0,
+          ", toujours en concertation avec plusieurs personnes et pas que le médecin, fin du paternalisme et patient acteur de son traitement."
+        ],
+        [
+          "Les directives anticipées rédigées par un patient constituent son principe d'autonomie et s'imposent au corps médical même s' il tombe dans le coma et que l’on ne sait pas si il se réveillera.",
+          1,
+          ", les directives doivent être respectées ou alors on s’oppose à l'autonomie du patient."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Éthique médicale",
+      "q": "Une patiente de 92 ans est admise aux urgences après avoir subi un AVC. Elle a de lourdes séquelles qui la font souffrir : elle est hémiplégique, n’arrive plus à communiquer et est dépendante pour les gestes du quotidien. Ses fils aimeraient que les médecins mettent en œuvre tous les moyens pour la garder en vie mais ceux-ci hésitent car son état est déjà très dégradé. Ils organisent une réunion pour en parler avec la famille. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Clara)",
+      "inv": 0,
+      "p": [
+        [
+          "Le fait que les médecins prennent le temps de discuter avec la famille de la patiente pour mieux les accompagner dans cette situation singulière est caractéristique de l’éthique de la vertu.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Ce temps de discussion permettrait d’aboutir à un compromis pour que toutes les personnes se sentent en accord avec cette décision.",
+          0,
+          ", d’après l’éthique procédurale de Habermas, il faut arriver à un consensus pour que toutes les parties se sentent en accord, même minimal, avec la décision finale. Un compromis signifierait que tout le monde cède une partie, or ce n’est pas l’objectif dans ce type de situation."
+        ],
+        [
+          "Selon l’éthique déontologique, les médecins devraient suivre l’avis de la famille.",
+          0,
+          ", si les médecins suivent l’avis de la famille alors ils ne sont plus autonomes, ils ne font pas librement ce qu’ils doivent faire. Leur but est surtout de respecter les principes et la dignité de la patiente, même si les conséquences peuvent être défavorables."
+        ],
+        [
+          "Évaluer les bénéfices et les risques de chaque option relève de l’éthique procédurale.",
+          0,
+          ", évaluer les bénéfices et les risques de chaque option relève de l’éthique conséquentialiste car on cherche à obtenir les conséquences les plus favorables possibles."
+        ],
+        [
+          "La discussion réalisée dans de bonnes conditions (règles de sincérité et de symétrie) est essentielle pour prendre une décision éthique dans ce contexte.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Le radical -gon fait référence au genou, mais peut également désigner ce qui est génital.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Une cléidoctomie est une intervention chirurgicale consistant à retirer une partie ou la totalité de la clavicule.",
+          0,
+          ", c’est une cléidectomie. Rappel: -cléid = clavicule et ectomie = ablation"
+        ],
+        [
+          "Une spondilodyscite désigne une infection simultanée de la vertèbre et du disque intervertébral.",
+          0,
+          ", c’est une spondylodiscite. Rappel: spondyl- = vertèbre et disc- = disque."
+        ],
+        [
+          "Les radicaux -onyx, -onyc et -ungu font référence à l’ongle.",
+          0,
+          ", les radicaux -onyx, -onych et -ungu font référence à l’ongle."
+        ],
+        [
+          "Les termes fibula et péroné désignent la même structure anatomique, et signifient littéralement « broche ».",
+          1,
+          ", le terme péroné vient du grec tandis que fibula vient du latin."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Un jeune homme est admis aux urgences après s’être fait renverser par une voiture. Il présente des douleurs et des lésions aux membres inférieurs. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?(Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "La coxopathie est un terme désignant l’ensemble des affections du coccyx.",
+          0,
+          ", la coxopathie est un terme désignant l’ensemble des affections de la hanche."
+        ],
+        [
+          "Le patient dit avoir de fortes douleurs à la hanche. Il présente donc une cruralgie.",
+          0,
+          ", une cruralgie désigne une douleur à la cuisse."
+        ],
+        [
+          "Le radical -tibi signifie littéralement la flûte.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Après quelques jours d’hospitalisation, une inflammation de la peau du pied s’est développée. Cela évoque donc une pododermatite.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Une musculopathie désigne une lésion ou une atteinte du muscle.",
+          0,
+          ", une myopathie désigne une lésion ou une atteinte du muscle. Le terme musculopathie n’existe pas."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "Le terme thrombose se décompose en thromb- qui veut dire caillot et -ose qui signifie maladie inflammatoire.",
+          0,
+          ", thromb- signifie bien caillot mais -ose signifie maladie non-inflammatoire."
+        ],
+        [
+          "Le terme arthérosclérose désigne le durcissement des artères.",
+          0,
+          ", ATTENTION c’est l’artériosclérose qui désigne le durcissement des artères, (+ athérosclérose, c’est le durcissement des plaques d’athérome)."
+        ],
+        [
+          "L’hématémèse désigne un vomissement de sang provenant des voies aériennes, tandis que l'hémoptysie est un vomissement de sang provenant du tube digestif.",
+          0,
+          ", c’est l’inverse, attention à bien les distinguer !!"
+        ],
+        [
+          "Une phlébosclérose désigne une durcissement des parois d’une veine.",
+          1,
+          ", phléb- désigne veine et -sclérose le durcissement."
+        ],
+        [
+          "Vaso- et angio- sont deux radicaux synonymes désignant les vaisseaux.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Un patient, M. Patt, se présente aux urgences pour de fortes difficultés respiratoires. Il subit plusieurs examens à l’issue desquels plusieurs constats sont faits. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "Un des symptômes observés chez le patient est la toux. En langage médical le radical qui y correspond est touss-.",
+          0,
+          ", c’est le radical tuss-, et non touss-."
+        ],
+        [
+          "Nous avons pu observer lors de l'auscultation une hypopnée. Celle-ci désigne une diminution de sa ventilation.",
+          1,
+          ", le radical hypo- signifie bas/diminué et le radical -pnée est relatif à la ventilation."
+        ],
+        [
+          "Pour mesurer plus précisément sa capacité respiratoire, nous utilisons un spiromètre, c’est un appareil de mesure dans lequel on aspire avec la bouche, comme le radical spiro- l’indique.",
+          0,
+          ", le radical spiro- désigne le fait de souffler."
+        ],
+        [
+          "Des analyses sanguines révèlent une hypoxémie, qui désigne un manque d’oxygène dans les poumons.",
+          0,
+          ", l’hypoxémie désigne un manque d’oxygène dans le sang (-émie)."
+        ],
+        [
+          "Le bilan des examens révèlent une affection sévère des vaisseaux pulmonaires, que l’on appelle pneumo-angiopathie.",
+          1,
+          ", pneumo- est relatif aux poumons, angio- désigne les vaisseaux et -pathie désigne les affections."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exactes ? (Aya)",
+      "inv": 0,
+      "p": [
+        [
+          "Une iridectomie correspond à l’ablation d’une partie de la cornée.",
+          0,
+          ", une iridectomie correspond à l’excision d’une partie de l’iris, et non de la cornée."
+        ],
+        [
+          "Les racines bléphar-, tars- et palpébr- peuvent toutes renvoyer à la paupière.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Le terme autopsie renvoie étymologiquement à l’idée de « voir de ses propres yeux ».",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Dans stapédectomie, la racine péd- indique que l’intervention concerne le pied.",
+          0,
+          ", stapès désigne un osselet de l’oreille moyenne en forme d’étrier ; la stapédectomie est son ablation."
+        ],
+        [
+          "Une myringectomie désigne l’ablation partielle ou totale du tympan.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Une patiente de 35 ans consulte un ORL. Il utilise plusieurs termes médicaux sur son compte rendu. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Victoire)",
+      "inv": 0,
+      "p": [
+        [
+          "Le terme rhynopathie désigne une affection ou une maladie du nez.",
+          0,
+          ", c’est rhinopathie avec un -i et non un y."
+        ],
+        [
+          "L’olfaction correspond à la science qui étudie les odeurs tandis que l’osmologie désigne l’acte de sentir.",
+          0,
+          ", les deux définitions sont inversées."
+        ],
+        [
+          "Une hypersialorrhée correspond à une sécrétion excessive de salive.",
+          1,
+          ", hyper: excès, sial: salive et rrhée: écoulement."
+        ],
+        [
+          "Une glossorragie est une douleur dans la langue causée par une rage de dent qui irradie.",
+          0,
+          ", glosso: langue et rragie: jaillissement et non douleur (algie)."
+        ],
+        [
+          "Une anosmie soit une absence/ perte de l’odorat peut être observée en cas de rhume ou covid.",
+          0,
+          "⚠️ Incohérence du corrigé ATLAS : la clé officielle indique uniquement C, mais la ligne E est marquée « VRAI ». Réponse attendue retenue : C. , a: absence, privation et osmie: odorat."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Vous recevez un compte rendu d’un confrère et vous devez l’expliquer à un patient, c’est écrit: Patient présentant une spondylolyse en C7 suite à une chute. À son arrivée aux urgences il a fait une tachycardie stabilisée par des médicaments bathmotropes négatif, détection d’une cardiopathie sous jacente, risque de myélite a surveiller. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ?(AUGRIS)",
+      "inv": 0,
+      "p": [
+        [
+          "Le patient présente une lésion de l’articulation C7 entraînant des complications cardiaques.",
+          0,
+          ", lésion vertébrale et pas de lien avec le cœur."
+        ],
+        [
+          "Le patient n’aura pas de complications au niveau de la moelle à la suite de la chute subie.",
+          0,
+          ", risque de myélite qui est une inflammation de la moelle."
+        ],
+        [
+          "Le cœur bat à un rythme trop lent à l'arrivée au urgence d'où la nécessité d'utiliser des médicament bathmotrope.",
+          0,
+          ", tachy désigne rapide ."
+        ],
+        [
+          "Le patient a déjà un problème de cœur avant d’arriver aux urgences.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Le terme spondy désigne la vertèbre et tachycardie un mouvement cardiaque pas assez rapide.",
+          0,
+          ", la première partie est vraie, la seconde est fausse."
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes relatives à la sémantique, laquelle (lesquelles) est (sont) exactes? (AUGRIS)",
+      "inv": 0,
+      "p": [
+        [
+          "Le mot Cordialement utilisé pour les mails signifie avec le cœur.",
+          1,
+          ", cor vient du latin qui signifie cœur."
+        ],
+        [
+          "La Thoracoplastie est une incision chirurgicale pour accéder aux organes de la cage thoracique.",
+          0,
+          ", Thoracotomie"
+        ],
+        [
+          "La Thoracotomie est le fait de retirer une ou plusieurs cotes pour remodeler la cage thoracique affaissée.",
+          0,
+          ", Thoracoplastie"
+        ],
+        [
+          "La Dextrocardie est une anomalie médicale qui fait que la pointe du cœur est vers la droite.",
+          1,
+          ", dextro veut dire droit ."
+        ],
+        [
+          "Phonocardiogramme est un examen traçant les bruits du cœur.",
+          0,
+          "⚠️ La correction mentionne une faute (« phona », « grame ») qui ne figure pas dans l'énoncé reproduit, où « Phonocardiogramme » est orthographié correctement. Clé officielle AD conservée. , phono et pas phona et gramme et non grame le vrai mot est phonocardiogramme"
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) inexacte(s) ? (Clara)",
+      "inv": 1,
+      "p": [
+        [
+          "Une patiente va voir son médecin généraliste après s’être sentie faible pendant plusieurs jours. Elle peut se plaindre de céphalées.",
+          1,
+          "⚠️ Incohérence du corrigé ATLAS : la question demande les propositions INEXACTES et donne AC, mais les lignes A et C sont marquées « VRAI », tandis que B, D et E sont marquées « FAUX ». Clé officielle conservée : AC. , elle peut se plaindre de céphalées (attention à l’orthographe)."
+        ],
+        [
+          "Une patiente dit ne pas réussir à bouger son cou à cause de douleurs. Elle souffre donc d’une cervicalgie.",
+          0,
+          "⚠️ Incohérence du corrigé ATLAS : la question demande les propositions INEXACTES et donne AC, mais les lignes A et C sont marquées « VRAI », tandis que B, D et E sont marquées « FAUX ». Clé officielle conservée : AC. "
+        ],
+        [
+          "Une encéphalite désigne une maladie dans laquelle l’encéphale est de petite taille.",
+          1,
+          "⚠️ Incohérence du corrigé ATLAS : la question demande les propositions INEXACTES et donne AC, mais les lignes A et C sont marquées « VRAI », tandis que B, D et E sont marquées « FAUX ». Clé officielle conservée : AC. , une encéphalite désigne une inflammation d’une partie de l’encéphale."
+        ],
+        [
+          "La suture métopique désigne la suture crânienne de l’os frontal chez l’enfant.",
+          0,
+          "⚠️ Incohérence du corrigé ATLAS : la question demande les propositions INEXACTES et donne AC, mais les lignes A et C sont marquées « VRAI », tandis que B, D et E sont marquées « FAUX ». Clé officielle conservée : AC. "
+        ],
+        [
+          "L’os sphénoïde a la forme d’un coin.",
+          0,
+          "⚠️ Incohérence du corrigé ATLAS : la question demande les propositions INEXACTES et donne AC, mais les lignes A et C sont marquées « VRAI », tandis que B, D et E sont marquées « FAUX ». Clé officielle conservée : AC. "
+        ]
+      ]
+    },
+    {
+      "s": "Concours blanc 1",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Clara)",
+      "inv": 0,
+      "p": [
+        [
+          "Un syndrome cérébelleux est un syndrome qui touche le cerveau.",
+          0,
+          ", un syndrome cérébelleux est un syndrome qui touche le cervelet."
+        ],
+        [
+          "La racine -sopor signifie l’état d’éveil.",
+          0,
+          ", la racine -sopor se rapporte au sommeil profond, l’assoupissement, la torpeur."
+        ],
+        [
+          "Une névralgie fait référence à une douleur au niveau d’un nerf.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ],
+        [
+          "Le mot onyrique fait référence à ce qui est relatif au rêve.",
+          0,
+          ", le mot « onirique » (attention à l’orthographe) fait référence à ce qui est relatif au rêve."
+        ],
+        [
+          "Le mot grec « thalamos » désignait la chambre à coucher. C’est pourquoi on a nommé le thalamus la partie du cerveau qui joue un rôle important dans la veille et le sommeil.",
+          1,
+          "Proposition marquée vraie dans le corrigé ATLAS, sans justification supplémentaire."
+        ]
+      ]
     }
   ],
   "cards": []
