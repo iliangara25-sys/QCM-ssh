@@ -419,7 +419,34 @@ function quiz(){
  const nx=$("#nx");if(nx)nx.onclick=()=>{i++;save();quiz();scrollTo(0,0)};
  const pv=$("#pv");if(pv)pv.onclick=()=>{i--;save();quiz();scrollTo(0,0)}}
 function bindP(){const rs=$("#rs");if(rs)rs.onclick=()=>{if(rs.dataset.c)resetF();else{rs.dataset.c=1;rs.textContent="Confirmer ? (efface ce filtre)"}};document.querySelectorAll("[data-f]").forEach(b=>b.onclick=()=>setF(b.dataset.f));document.querySelectorAll(".pl button").forEach(b=>b.onclick=()=>{i=+b.dataset.n;save();quiz();scrollTo(0,0)})}
-function rev(){$("#app").innerHTML=REV;
+
+const FICHES_SEANCE2 = `
+<div class="c"><h2>📘 Fiche ATLAS — Éthique et différents courants de pensée (Séance 2)</h2>
+<p class="mu">Fiche synthèse ATLAS · UE SSH · 2026–2027 · contenu réorganisé pour la lecture sur écran</p>
+<h3>Éthique de la vertu — Aristote</h3>
+<ul><li>Question centrale : « Qui je dois être ? » Le caractère moral et les vertus de l'agent sont essentiels.</li><li>Adapter le jugement à la singularité de chaque situation ; rechercher le juste milieu (lâcheté / courage / témérité).</li><li><b>Phronesis</b> : sagesse pratique, règle souple adaptée aux circonstances.</li><li>Apprentissage par expérience et compagnonnage ; ne pas appliquer mécaniquement une règle universelle.</li></ul>
+<h3>Éthique déontologique — Kant</h3>
+<ul><li>Question : « Quel devoir moral dois-je respecter ? » Le devoir et l'intention derrière l'action priment.</li><li>Obligations morales à vocation universelle ; liberté du devoir moral : faire librement ce que l'on doit faire.</li><li>L'individu se dicte sa propre loi morale (autonomie). On ne juge pas l'action uniquement à ses conséquences.</li></ul>
+<h3>Éthiques procédurales — Habermas</h3>
+<ul><li>Question : « La procédure pour établir la règle est-elle correcte ? » La qualité du processus décisionnel prime.</li><li>Éthique de la discussion : recherche du <b>consensus</b>, plutôt que du compromis.</li><li><b>Sincérité</b> : ne pas tromper autrui. <b>Symétrie</b> : aucune hiérarchie entre participants, chacun peut s'exprimer.</li></ul>
+<h3>Conséquentialisme et utilitarisme — Bentham et J. S. Mill</h3>
+<ul><li>Une action est jugée moralement bonne selon ses conséquences.</li><li>L'utilitarisme, branche du conséquentialisme, cherche à maximiser le bonheur du plus grand nombre.</li><li>Limites : bonheur difficile à quantifier et comparer ; réduction possible des autres valeurs ; difficulté d'envisager toutes les conséquences.</li></ul>
+<h3>Principlisme</h3>
+<ul><li>Approche de l'éthique médicale depuis le XXe siècle, fondée sur des principes prédéfinis et universellement acceptables ; référence au rapport Belmont et à la bioéthique.</li><li>Quatre principes : <b>autonomie, bienfaisance, non-malfaisance, justice</b>.</li><li>Limites : syncrétisme athéorique (courants parfois contradictoires), réduction de l'éthique à la résolution de conflits, nécessité d'une réflexion préalable.</li></ul>
+</div>
+<div class="c"><h2>📗 Fiche ATLAS — Secret médical (Séance 2)</h2>
+<p class="mu">Fiche synthèse ATLAS · UE SSH · 2026–2027 · contenu réorganisé pour la lecture sur écran</p>
+<h3>Définition et enjeux</h3>
+<p>Obligation légale et déontologique de protéger les informations découvertes, confiées, observées ou comprises dans l'exercice médical. Elle protège l'intimité, la vie privée et l'autonomie du patient, et renforce la confiance, le diagnostic et l'adhésion aux soins.</p>
+<h3>Fondements juridiques</h3>
+<ul><li>Serment d'Hippocrate : engagement à garder secrètes les informations apprises.</li><li>Article 226-13 du Code pénal : violation du secret sanctionnée, hors exceptions légales, d'un an d'emprisonnement et 15 000 € d'amende (selon la fiche).</li><li>Article 4 du Code de déontologie médicale : secret institué dans l'intérêt des patients ; couvre aussi les informations implicites apprises dans l'exercice professionnel.</li><li>Loi Kouchner du 4 mars 2002 : respect de la vie privée et des informations médicales.</li></ul>
+<h3>Champ d'application et tiers</h3>
+<ul><li>Secret imposé aux professionnels participant à la prise en charge et à leurs collaborateurs ; il n'est pas opposable au patient lui-même.</li><li>Partage entre soignants limité aux personnes directement impliquées dans les soins.</li><li><b>Erga omnes</b> : le secret vaut à l'égard de tous, y compris conjoint et famille, sauf exception.</li><li>Patient incapable d'exprimer sa volonté : proches consultables ; pronostic fatal : information possible des proches sauf opposition du patient.</li><li>Mineurs : règles particulières ; « grands mineurs » notamment pour contraception et grossesse.</li></ul>
+<h3>Dérogations légales et cas spécifiques</h3>
+<ul><li><b>Patient décédé</b> : accès des ayants droit pour connaître les causes du décès, faire valoir des droits ou défendre la mémoire du défunt.</li><li><b>Intérêt collectif</b> : maladies à déclaration obligatoire (exemples de la fiche : saturnisme, VIH).</li><li><b>Réquisition</b> : cadre spécifique d'une réquisition formelle par un officier de police.</li><li><b>Maltraitance</b> : signalement possible selon la situation, avec évaluation et protection du patient.</li><li><b>Violences sexuelles ou conjugales</b> : la fiche distingue victime mineure et majeure ; pour la majeure, encourager le signalement, avec dérogations en cas de danger immédiat redouté ou d'emprise.</li></ul>
+</div>`;
+
+function rev(){$("#app").innerHTML=REV+FICHES_SEANCE2;
  let h="";ALL.forEach((q,n)=>{h+=`<details><summary>${n+1}. ${esc(q.th)} · ${esc(q.s)}</summary><p class="mu">${esc(q.q)}</p><ul>`+q.p.map((p,k)=>`<li><b>${L[k]}</b> ${p[1]?"✅":"❌"} ${esc(p[0])}<br><span class="mu">→ ${esc(p[2])}</span></li>`).join("")+"</ul></details>"});
  $("#qfiche").innerHTML=h;
  $("#app").insertAdjacentHTML("beforeend",`<div class="c lx"><h2>📖 Lexique complet (${CARDS.length} mots)</h2><input id="sq" placeholder="Rechercher un mot ou une définition…"><div id="lxl"></div></div>`);$("#lxl").innerHTML=lexHTML();$("#sq").oninput=e=>{$("#lxl").innerHTML=lexHTML(e.target.value)};
