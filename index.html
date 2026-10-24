@@ -397,7 +397,7 @@ const $=s=>document.querySelector(s),L="ABCDE";
 function show(t){[1,2,3,4].forEach(k=>$("#n"+k).classList.toggle("on",t==k));if(t==1)quiz();else if(t==3){mk();fcards()}else if(t==4)addPage();else rev()}
 $("#n1").onclick=()=>show(1);$("#n2").onclick=()=>show(2);$("#n3").onclick=()=>show(3);$("#n4").onclick=()=>show(4);
 function setF(f){save();F=f;Q=f=="Tout"?ALL:ALL.filter(q=>q.s==f);i=Math.min(pos[F]||0,Q.length);quiz()}
-function chips(){return `<div class="chips">`+["Tout",...new Set(ALL.map(q=>q.s))].map(f=>`<button class="b${f==F?" p":""}" style="flex:0 0 auto;width:auto;height:auto;border-radius:20px;padding:5px 14px;font-size:13px" data-f="${esc(f)}">${esc(f)}</button>`).join("")+`</div>`}
+function chips(){return `<div class="chips">`+["Tout",...new Set(ALL.map(q=>q.s))].sort((a,b)=>a==="Tout"?-1:b==="Tout"?1:a.localeCompare(b,"fr",{numeric:true})).map(f=>`<button class="b${f==F?" p":""}" style="flex:0 0 auto;width:auto;height:auto;border-radius:20px;padding:5px 14px;font-size:13px" data-f="${esc(f)}">${esc(f)}</button>`).join("")+`</div>`}
 function pills(){return `<div class="pl">`+Q.map((q,n)=>`<button data-n="${n}" class="${n==i?"cur ":""}${done[q.id]?(res[q.id]==q.p.length?"g":"r"):""}">${n+1}</button>`).join("")+`</div>`}
 function quiz(){
  if(i>=Q.length){const tp=Q.reduce((a,q)=>a+q.p.length,0);
