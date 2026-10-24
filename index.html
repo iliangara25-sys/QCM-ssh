@@ -47,7 +47,7 @@ details{border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin:8p
 #sq{width:100%;padding:10px 12px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font:inherit;margin-bottom:10px}
 .lx li{margin:6px 0}.lx .mu{display:block}
 </style></head><body><div class="w">
-<nav><button id="n1" class="on">🧪 QCM</button><button id="n3">🃏 Flashcards</button><button id="n2">📚 Révision</button></nav>
+<nav><button id="n1" class="on">🧪 QCM</button><button id="n3">🃏 Flashcards</button><button id="n2">📚 Révision</button><button id="n4">➕ Ajouter</button></nav>
 <div id="app"></div></div>
 <script>
 /* ====== DONNÉES : pour ajouter des QCM, copier un bloc {th,q,p:[[texte,vrai?,explication],…]} ====== */
@@ -391,8 +391,8 @@ const sc=()=>Q.reduce((a,q)=>a+(done[q.id]?res[q.id]:0),0);
 function prog(){const n=Q.filter(q=>done[q.id]).length,t=Q.length;return `<div class="mu" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><span>Progression : <b>${n}/${t}</b> questions · ${sc()} items justes</span><button class="b" id="rs" style="padding:4px 10px;font-size:12px">↺ Réinitialiser</button></div><div style="height:7px;background:var(--bd);border-radius:6px;margin:6px 0 12px;overflow:hidden"><i style="display:block;height:100%;width:${100*n/Math.max(t,1)}%;background:var(--ac)"></i></div>`}
 function resetF(){Q.forEach(q=>{delete ans[q.id];delete done[q.id];delete res[q.id]});i=0;save();quiz();scrollTo(0,0)}
 const $=s=>document.querySelector(s),L="ABCDE";
-function show(t){[1,2,3].forEach(k=>$("#n"+k).classList.toggle("on",t==k));if(t==1)quiz();else if(t==3){mk();fcards()}else if(t==4)addPage();else rev()}
-$("#n1").onclick=()=>show(1);$("#n2").onclick=()=>show(2);$("#n3").onclick=()=>show(3);
+function show(t){[1,2,3,4].forEach(k=>$("#n"+k).classList.toggle("on",t==k));if(t==1)quiz();else if(t==3){mk();fcards()}else if(t==4)addPage();else rev()}
+$("#n1").onclick=()=>show(1);$("#n2").onclick=()=>show(2);$("#n3").onclick=()=>show(3);$("#n4").onclick=()=>show(4);
 function setF(f){save();F=f;Q=f=="Tout"?ALL:ALL.filter(q=>q.s==f);i=Math.min(pos[F]||0,Q.length);quiz()}
 function chips(){return `<div class="chips">`+["Tout",...new Set(ALL.map(q=>q.s))].map(f=>`<button class="b${f==F?" p":""}" style="flex:0 0 auto;width:auto;height:auto;border-radius:20px;padding:5px 14px;font-size:13px" data-f="${esc(f)}">${esc(f)}</button>`).join("")+`</div>`}
 function pills(){return `<div class="pl">`+Q.map((q,n)=>`<button data-n="${n}" class="${n==i?"cur ":""}${done[q.id]?(res[q.id]==q.p.length?"g":"r"):""}">${n+1}</button>`).join("")+`</div>`}
