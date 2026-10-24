@@ -1,4 +1,566 @@
 {
-  "qcm": [],
+  "qcm": [
+    {
+      "s": "Séance 2",
+      "th": "Éthique et concepts",
+      "q": "Mr Bernard est atteint d’une maladie grave et souhaite arrêter les traitements curatifs. Sa famille s’y oppose. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Victoire)",
+      "inv": 0,
+      "p": [
+        [
+          "Selon l’éthique de la vertu, le médecin doit appliquer systématiquement la même règle quelle que soit la situation.",
+          0,
+          ", l’éthique de la vertu mobilise le phronesis qui permet de s’adapter à chaque situation."
+        ],
+        [
+          "Selon Kant, le médecin peut ignorer le choix du patient pour satisfaire la position de sa famille.",
+          0,
+          ", selon Kant il faut que la décision soit morale et il ne faut jamais utiliser la personne comme un moyen (ici de satisfaire le choix de sa famille)."
+        ],
+        [
+          "Une approche conséquentialiste conduit à comparer les bénéfices et les souffrances associés aux différentes options.",
+          1,
+          ", le conséquentialisme évalue la valeur morale d’une action en fonction de ses conséquences (bénéfice et souffrance qu’elle entraîne)."
+        ],
+        [
+          "L’éthique procédurale invite les personnes concernées à échanger leurs arguments dans des conditions équitables et de façon sincère.",
+          1,
+          ", l’éthique procédurale privilégie une discussion sincère et équitable peu importe le choix final."
+        ],
+        [
+          "Selon le principlisme, le respect de l’autonomie est le seul principe à prendre en compte.",
+          0,
+          ", le principlisme repose sur quatre principes : le respect de l’autonomie, la bienfaisance, la non-malfaisance et la justice. Ils doivent être considérés ensemble."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Éthique et concepts",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Clara)",
+      "inv": 0,
+      "p": [
+        [
+          "Un patient qui se présente chez le médecin parce qu’il a mal à la tête est un exemple d’illness. L’objectif du médecin en l’examinant sera donc seulement de déterminer s’il présente une sickness.",
+          0,
+          ", un patient qui se présente chez le médecin parce qu’il a mal à la tête est bien un exemple d’illness, mais le médecin va rechercher s’il n’y a pas un dysfonctionnement biologique derrière cette souffrance, c’est-à-dire une disease."
+        ],
+        [
+          "La valeur ou la norme peut se constater ou se mesurer, elle est donc reliée au terme de disease.",
+          0,
+          ", la valeur ou la norme ne peut pas se constater ou se mesurer : elle est le fruit d’un jugement humain, d’opinions sociales, de préférences personnelles. Elle est subjective et est donc reliée aux termes de illness et sickness."
+        ],
+        [
+          "Obtenir un arrêt de travail est un exemple de sickness.",
+          1,
+          ", car la société accepte de reconnaître chez la personne un motif l’empêchant de travailler dans de bonnes conditions, elle a un statut particulier."
+        ],
+        [
+          "La sickness est un concept descriptif, c’est-à-dire qu’il met en jeu la notion de valeur.",
+          0,
+          ", la sickness est un concept axiologique, c’est-à-dire qu’il met en jeu la notion de valeur"
+        ],
+        [
+          "Un fait est quelque chose d’objectif : un patient qui présente un taux de glucose sanguin de 1 g/L aura cette même valeur, que ce soit le soignant A ou le soignant B qui réalise la mesure.",
+          1,
+          ", un fait ne change pas d’un observateur à l’autre, donc si deux personnes mesurent un taux, il sera le même d’une personne à l’autre."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Éthique et concepts",
+      "q": "Parmi les propositions suivantes, relatives aux phénomènes de médicalisation et pathologisation, laquelle (lesquelles) est (sont) exacte(s) ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "Les phénomènes de médicalisation et de pathologisation peuvent varier selon les époques et les contextes socioculturels.",
+          1,
+          ", pendant une certaine période l’homosexualité était considérée comme une pathologie : en réalité il s’agissait d’un phénomène de pathologisation, en vue de réaliser un contrôle de la société. De nos jours, l’homosexualité n’est plus un phénomène de pathologisation."
+        ],
+        [
+          "La médicalisation est l’étape qui suit généralement un phénomène de pathologisation.",
+          0,
+          ", c’est l’inverse, la pathologisation c’est l’étape qui va “plus loin” que la médicalisation, en donnant le statut de pathologique à un phénomène."
+        ],
+        [
+          "La prise en charge de soins esthétiques est un phénomène de pathologisation.",
+          0,
+          ", c’est un phénomène de médicalisation, et non quelque chose qui relève de la pathologie (pathologisation)."
+        ],
+        [
+          "La prise en charge des contraceptions (prescription, suivi et accompagnement) relève de la médicalisation.",
+          1,
+          ", de nos jours la mise en place de contraception est un phénomène suivi et encadré médicalement parlant."
+        ],
+        [
+          "Les TCA (troubles du comportement alimentaire) sont un phénomène de pathologisation.",
+          1,
+          ", ne sont plus vus comme de simples dérèglements des habitudes alimentaires (excessifs, restrictifs etc..) mais comme de vrais troubles nécessitant un plan thérapeutique et un accompagnement psychologique."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Éthique et concepts",
+      "q": "Parmi les propositions suivantes, relatives aux différents courants éthiques, laquelle (lesquelles) est (sont) exacte(s) ? (Aya)",
+      "inv": 0,
+      "p": [
+        [
+          "L'éthique procédurale constitue une forme d'éthique déontologique.",
+          1,
+          "."
+        ],
+        [
+          "Le raisonnable désigne ce qui peut être démontré comme définitivement juste par un raisonnement formel contraignant.",
+          0,
+          ", Cette définition correspond au rationnel. Le raisonnable désigne ce que l'on a de bonnes raisons de faire, sans pouvoir nécessairement démontrer définitivement que cette décision est juste."
+        ],
+        [
+          "La discussion éthique repose notamment sur des exigences de sincérité et d’unanimité.",
+          0,
+          ", Selon Habermas, la discussion éthique repose sur des exigences de sincérité et de symétrie, et non d'unanimité."
+        ],
+        [
+          "La phronesis correspond à la recherche systématique du maximum de bonheur collectif.",
+          0,
+          ", La phronèsis correspond à la prudence ou sagesse pratique selon Aristote. Elle permet d'adapter son jugement à la singularité d'une situation. La maximisation du bonheur collectif relève de l'utilitarisme."
+        ],
+        [
+          "Lors d'un comité d'éthique, les participants échangent sincèrement, mais le chef de service impose finalement son avis en raison de son autorité : la procédure respecte les exigences de Habermas dès lors que chacun a pu parler.",
+          0,
+          ", selon Habermas, une discussion éthique doit respecter la sincérité et la symétrie. Le fait que le chef de service impose son avis en raison de son autorité ne respecte pas la symétrie, même si tous les participants ont pu s'exprimer."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Secret médical",
+      "q": "Le Dr X est médecin généraliste et il reçoit plusieurs demandes concernant les patients. Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? Victoire",
+      "inv": 0,
+      "p": [
+        [
+          "L’épouse d’un patient demande un certificat médical attestant que son mari est alcoolique pour l’utiliser lors de leur divorce. Le médecin peut lui remettre.",
+          0,
+          ", l’épouse est un tiers : le médecin ne peut pas lui remettre ce certificat sans l’accord de son mari."
+        ],
+        [
+          "Dr X peut transmettre des informations sur Madame Dupont à n’importe quel autre médecin/ infirmier tant qu’ils sont soumis au secret médical.",
+          0,
+          ", le partage d’informations est limité aux professionnels participant à la prise en charge, dans la mesure nécessaire aux soins."
+        ],
+        [
+          "Un jeune patient de 16 ans avoue à Dr X qu’il consomme de la drogue, le médecin doit avertir ses parents après le rendez- vous car il est mineur.",
+          0,
+          ", le médecin ne doit pas automatiquement informer les parents : on rentre dans le cas des “grands mineurs”."
+        ],
+        [
+          "Un patient du Dr X est décédé, sa femme demande la cause de sa mort, le médecin peut lui révéler.",
+          1,
+          ", après le décès, le médecin peut communiquer certaines informations aux ayants droit pour 3 motifs: voir question suivante"
+        ],
+        [
+          "Une patiente se présente chez Dr X avec un hématome sur le bras. Elle explique que son ex-conjoint était violent avec elle. Elle affirme également qu’ils se sont séparés et qu’elle vit maintenant chez ses parents. Le Dr X doit prévenir la police après le rendez-vous.",
+          0,
+          "Incohérence dans le document : la ligne E porte « VRAI », mais le corrigé officiel indique seulement D et l'explication précise que le médecin ne doit pas prévenir la police dans ce cas. . Une dérogation au secret médical est possible pour les victimes de violences conjugales mais sous 2 conditions: il doit y avoir un danger immédiat et/ou la victime est sous emprise. Ici, la victime ne semble plus être dans les 2 cas. On peut l’inciter à aller porter plainte mais on ne peut pas le faire pour elle."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Secret médical",
+      "q": "Parmi les propositions suivantes relatives au secret médical, laquelle (lesquelles) est (sont) exactes ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Un patient confie à son médecin qu’il a commis un meurtre il y a des années de celà. Un policier qui enquête toujours sur cette enquête interroge alors le médecin. Ici, le médecin n’est pas en obligation de donner des informations au policier, car le patient ne représente pas une menace immédiate.",
+          1,
+          "Proposition indiquée vraie dans le corrigé ATLAS."
+        ],
+        [
+          "Une jeune fille de 17 ans consulte un médecin car elle souhaite se faire prescrire un moyen de contraception. Elle demande au médecin de ne pas en informer ses parents. Selon le secret médical, le médecin se doit de partager cette information avec ses parents car la patiente est mineure.",
+          0,
+          ", le médecin se doit de respecter le secret médical car à 17 ans, on est considéré comme « grand mineur »."
+        ],
+        [
+          "Un médecin suit deux patientes victimes de violences sexuelles: une de 14 ans et une autre de 20 ans. Dans les deux cas, il se doit de le déclarer car les patientes sont en situation de danger.",
+          0,
+          ", pour la patiente mineure: il peut le déclarer sans son accord car elle est mineure. Pour la patiente majeure: il peut inciter la patiente à porter plainte d’elle-même mais il ne doit pas le déclarer sans son accord, sauf s’il y a un danger immédiat ou si la patiente est sous emprise."
+        ],
+        [
+          "Si une patiente désire avoir recours à une IVG sans en informer le père, le médecin se doit de respecter le secret médical.",
+          1,
+          "Proposition indiquée vraie dans le corrigé ATLAS."
+        ],
+        [
+          "Suite à un décès, les ayants droits peuvent accéder à des informations dans 2 cas: faire valoir des droits et connaître les causes du décès.",
+          0,
+          ", dans 3 cas : faire valoir des droits et connaître les causes du décès et défendre la mémoire du patient."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Secret médical",
+      "q": "Parmi les propositions suivantes, laquelle(lesquelles) est (sont) exactes? (AUGRIS)",
+      "inv": 0,
+      "p": [
+        [
+          "Il existe 3 dérogations pour lever le secret médical: maladie à déclaration obligatoire, crime et danger immédiat.",
+          0,
+          ", le crime ne rentre pas dans le secret médical si pas de notion de danger immédiat."
+        ],
+        [
+          "Un patient vous admet avoir cassé les genoux de son beau frère car il bat sa femme et compte recommencer avec une arme a feu, je le dénonce au prefet.",
+          1,
+          ", danger car arme à feu, si seulement cassage de genoux secret médicale valide."
+        ],
+        [
+          "Une patiente mariée en revenant d’un voyage d’affaire a contracté la syphilis, vous prévenez son mari car elle représente un danger pour lui.",
+          0,
+          ", maladie qui ne rentre pas dans l'intérêt collectif."
+        ],
+        [
+          "Le mari de cette patiente vient mais cette fois vous constaté qu’il a le VIH, vous faites une déclaration car c’est d'intérêt publique.",
+          1,
+          ", intérêt collectif."
+        ],
+        [
+          "Votre ami et collègue chirurgien traumatique aux urgences, en sortie de garde, vous avoue qu’il prend de la cocaïne car il ne tient plus, vous le dénoncez car cela ne rentre pas dans le secret médical.",
+          0,
+          ", cela reste du secret médical vous êtes professionnel, mais vous le dénoncez car danger pour les patients."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? Victoire",
+      "inv": 0,
+      "p": [
+        [
+          "Une cérébellite désigne une inflammation du cerveau, tandis que craniotomie désigne une incision chirurgicale du crâne.",
+          0,
+          ", cérébellite désigne une inflammation du cervelet (-cérébell)."
+        ],
+        [
+          "Le terme thymie désigne une structure anatomique du cerveau.",
+          0,
+          ", le terme thymie signifie l’humeur, le moral. Ne pas confondre avec le thymus."
+        ],
+        [
+          "Une plaie occipitale se situe sur le côté de la tête.",
+          0,
+          ", c’est une plaie qui se situe derrière la tête (occip-), une plaie sur le côté serait temporale."
+        ],
+        [
+          "Un médicament soporifique est un médicament qui permet d’avoir de l’énergie.",
+          0,
+          ", un médicament soporifique favorise le sommeil (sopor: sommeil très profond)."
+        ],
+        [
+          "Le terme mitochondrie signifie littéralement petit grain.",
+          1,
+          "."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Clara)",
+      "inv": 0,
+      "p": [
+        [
+          "Une érythropsie est un trouble de la vision dans lequel les gens voient les objets et les surfaces en rouge.",
+          1,
+          "."
+        ],
+        [
+          "Une bléfarite désigne une inflammation des paupières.",
+          0,
+          ", une blépharite est une inflammation des paupières (attention à l’orthographe)."
+        ],
+        [
+          "La biopsie est le fait de regarder des deux côtés.",
+          0,
+          ", une biopsie est le prélèvement d’un échantillon de tissu ou cellules afin de l’analyser au microscope (bio- signifie « la vie »)."
+        ],
+        [
+          "Une kératalgie est une douleur au niveau de la kératine.",
+          0,
+          ", kérat- signifie « cornée » donc la kératalgie est une douleur au niveau de la cornée."
+        ],
+        [
+          "Une endoscopie est un examen qui a pour but d’observer l’intérieur du corps.",
+          1,
+          ", endo- signifie « intérieur » et -scop- signifie « observer »."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes relatives, laquelle (lesquelles) est (sont) exacte(s) ? (Clara)",
+      "inv": 0,
+      "p": [
+        [
+          "Le préfixe capil- est relatif aux cheveux.",
+          0,
+          ", le préfixe capill- est relatif aux cheveux (attention il y a deux L)."
+        ],
+        [
+          "« Thrombus » est le terme médical pour désigner un caillot.",
+          1,
+          "."
+        ],
+        [
+          "Une phlébectasie désigne une dilatation artérielle.",
+          0,
+          ", une phlébectasie désigne une dilatation veineuse (phleb- signifie « veine » et -ectasie signifie « dilatation »). Les artères sont définies par le préfixe arté-."
+        ],
+        [
+          "Ce qui est situé en avant de la région du cœur se dit « péricordial ».",
+          0,
+          ", ce qui est situé en avant du cœur se dit « précordial ». Le mot péricordal n’existe pas, pour désigner ce qui entoure le cœur on dit péricardique."
+        ],
+        [
+          "Un lymphangyome est une tumeur qui s’est développée aux dépens des vaisseaux lymphatiques.",
+          0,
+          ", un lymphangiome (attention à l’orthographe) est une tumeur qui s’est développée aux dépens des vaisseaux lymphatiques. Lymph- signifie « la lymphe », angio- signifie « les vaisseaux » et -ome signifie « tumeur »."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Après un choc au visage, un patient ne parvient plus à sentir les odeurs: il présente donc une anosmie.",
+          1,
+          ", a- = absence et osm- = odeur."
+        ],
+        [
+          "Un ptialisme désigne une sécrétion excessive de salive.",
+          0,
+          ", c’est un ptyalisme. Ptyal = salive."
+        ],
+        [
+          "Une uranoplastie est une réparation chirurgicale du palais.",
+          1,
+          "Proposition indiquée vraie dans le corrigé ATLAS."
+        ],
+        [
+          "Un jeune homme consulte car il a les gencives rouges, gonflées et qui saignent lorsqu’il se brosse les dents. Le médecin constate alors une inflammation de la gencive: c’est une gengivite.",
+          0,
+          ", c’est une gingivite. Gingiv= gencive et ite= inflammatoire."
+        ],
+        [
+          "Une patiente qui a constamment la bouche sèche présente une hyposialie.",
+          1,
+          ", c’est une diminution de la sécrétion salivaire."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? AUGRIS",
+      "inv": 0,
+      "p": [
+        [
+          "Le terme chondromalacy est une pathologie des articulations qui sont molles.",
+          0,
+          ", Malacie."
+        ],
+        [
+          "Un vegan peut être désigné comme un phytophage.",
+          1,
+          ", phyto: plante, phage: mange"
+        ],
+        [
+          "Une personne atteinte du syndrome de Gille de la tourette est désignée comme atteinte de coprolalie.",
+          1,
+          ", copro: excréments, lalie: parole, langage"
+        ],
+        [
+          "Spondylarthite est une inflammation des vertèbres et connue comme étant douloureuse et handicapante.",
+          0,
+          ", manque un R a spondylarthrite."
+        ],
+        [
+          "une ponction lombaire, désigne une ponction au niveau du dos et sert à récupérer du LCR (Liquide Cérébro Rachidien) qui devrait s’appeler LCS (Liquide Cebro Spinal).",
+          0,
+          ", Cérébro et pas Cébro."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) sont inexacte(s) ? (Kawthar)",
+      "inv": 1,
+      "p": [
+        [
+          "L’audimètre est un appareil médical permettant de mesurer la capacité auditive.",
+          1,
+          ", c’est l’audiomètre et non l’audimètre : le radical est audio- (qui signifie audition)."
+        ],
+        [
+          "La cochlée est une structure de l’oreille en forme de coquille d’escargot.",
+          0,
+          ", cochl- renvoie à la coquille d’escargot (forme)."
+        ],
+        [
+          "Un patient semble avoir des acouphènes. Ce sont des bruits (sifflements par exemple) perçus dans l’oreille sans source sonore extérieure.",
+          0,
+          ", définition vue en cours"
+        ],
+        [
+          "Une conséquence grave d’un traumatisme sonore peut être une perte totale et irréversible de l’audition, appelée cophose.",
+          0,
+          ", la cophose est la perte totale d’audition (aussi appelée anacousie)."
+        ],
+        [
+          "Le radical coph- est retrouvé dans des termes relatifs à l’audition.",
+          1,
+          ", coph- renvoie à la surdité, le contraire de l’audition (cf item D)."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Kawthar)",
+      "inv": 0,
+      "p": [
+        [
+          "Une trachéotomie désigne une intervention chirurgicale qui consiste à faire une ouverture (incision) au niveau de la trachée.",
+          1,
+          ", trachéo- renvoie à la trachée et -tomie désigne incision/section."
+        ],
+        [
+          "Une pneumonite correspond à une inflammation des poumons.",
+          1,
+          ", pneumo- renvoie aux poumons et -ite renvoie à l’inflammation."
+        ],
+        [
+          "Le radical pleuvr- désigne la plèvre (membrane séreuse qui entoure les poumons).",
+          0,
+          ", attention, le radical c’est pleur-, comme dans pleurésie, et non pleuvr-."
+        ],
+        [
+          "Le radical -capnie désigne ce qui est relatif au dioxygène.",
+          0,
+          ", -capnie = CO2 (dioxyde de carbone) et non dioxygène."
+        ],
+        [
+          "Une bronchosténose correspond au rétrécissement des bronches.",
+          1,
+          ", broncho- = bronche(s) et -sténose = rétrécissement (calibre)."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle (lesquelles) est (sont) exacte(s) ? (Kinzy)",
+      "inv": 0,
+      "p": [
+        [
+          "Un rhabdomyocyte est une cellule contractile qui compose les muscles lisses squelettiques.",
+          0,
+          ", c’est une cellule musculaire qui compose les muscles striés squelettiques. Rhabdo = strié."
+        ],
+        [
+          "Une myopatie désigne une maladie des muscles.",
+          0,
+          ", c’est une myopathie, attention au H !"
+        ],
+        [
+          "Le radical stéar- signifie graisse.",
+          1,
+          "Proposition indiquée vraie dans le corrigé ATLAS."
+        ],
+        [
+          "Le tissu adipeux est constitué de cellules dont le rôle est de stocker les lipides.",
+          1,
+          ", adip- = graisse, quand on parle de la graisse, on fait référence aux lipides."
+        ],
+        [
+          "Une stéatose est une accumulation anormale de graisse dans les cellules du foie.",
+          1,
+          ", stéat-/stéar = graisse."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle(lesquelles) est (sont) exacte(s)? AUGRIS",
+      "inv": 0,
+      "p": [
+        [
+          "En plus d’être le nom de poèmes, le terme spleen désigne la rate.",
+          1,
+          ", spleen en anglais est la rate et les poèmes de Baudelaire me hantent encore."
+        ],
+        [
+          "Une rénopyélite est une inflammation du rein et de sa cavité.",
+          0,
+          ", pyélonéphrite."
+        ],
+        [
+          "Une entérostomie est une incision au niveau de l’intestin grêle.",
+          0,
+          ", stomie est stoma bouche c’est le fait d’aboucher un segment du grêle a la peau."
+        ],
+        [
+          "Épigastre associe le terme (au-dessus) avec épi- mais également le (nombril) avec gastr-.",
+          0,
+          ", gastre = ventre."
+        ],
+        [
+          "Laprocentèse et le fait de fixer chirurgicalement la paroi à l'abdomen.",
+          0,
+          ", centèse est un prélèvement."
+        ]
+      ]
+    },
+    {
+      "s": "Séance 2",
+      "th": "Terminologie médicale",
+      "q": "Parmi les propositions suivantes, laquelle(lesquelles) est (sont) exacte(s)? (Aya)",
+      "inv": 0,
+      "p": [
+        [
+          "La racine col- renvoie à la notion de col ou de rétrécissement anatomique.",
+          0,
+          ", la racine col- désigne le côlon (gros intestin)"
+        ],
+        [
+          "La racine typhl- renvoie étymologiquement à la notion de torsion.",
+          0,
+          ", la racine typhl- renvoie étymologiquement à la notion d'« aveugle » et désigne le cæcum. La notion de torsion est associée à la racine ilé- (« rouler, tortiller »)."
+        ],
+        [
+          "Le suffixe -lyse peut évoquer la destruction ou la dissolution.",
+          1,
+          ", le suffixe -lyse peut signifier destruction, dissolution, mais également libération ou séparation. Par exemple, la cololyse consiste à libérer le côlon de ses adhérences."
+        ],
+        [
+          "Les termes iléum et ilion sont interchangeables puisqu'ils partagent une origine étymologique identique.",
+          0,
+          ", L'iléum est la dernière portion de l'intestin grêle, tandis que l'ilion est une partie de l'os iliaque. Ces termes ne sont donc pas interchangeables."
+        ],
+        [
+          "La racine proct(o)- renvoie à l'anus.",
+          1,
+          ", la racine proct(o)- renvoie à l'anus. Par exemple, une proctalgie désigne une douleur anale."
+        ]
+      ]
+    }
+  ],
   "cards": []
 }
