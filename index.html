@@ -450,6 +450,18 @@ function fcards(){
  $("#fc").onclick=()=>{fl=!fl;fcards()};$("#nx").onclick=()=>go(1);$("#pr").onclick=()=>go(-1);
  $("#yes").onclick=()=>{kn[c.id]=1;sv();if(FM=="rev"){mk();fcards()}else go(1)};
  $("#no").onclick=()=>{kn[c.id]=0;sv();go(1)}}
+// Raccourcis clavier des flashcards : espace = retourner, flèche droite = carte suivante sans validation.
+ document.addEventListener("keydown",e=>{
+  if(!$("#n3")?.classList.contains("on")||!deck.length)return;
+  if(e.target?.matches("input,textarea,select,[contenteditable='true']"))return;
+  if(e.code==="Space"){
+   if(e.target?.closest("button,a"))return;
+   e.preventDefault();fl=fl?0:1;fcards();
+  }else if(e.key==="ArrowRight"){
+   if(e.target?.matches("input,textarea,select"))return;
+   e.preventDefault();fi=(fi+1)%deck.length;fl=0;fcards();
+  }
+ });
 function lexHTML(q){q=(q||"").toLowerCase().trim();
  if(q)return "<ul>"+LEX_CARDS.filter(c=>(c.t+" "+c.d).toLowerCase().includes(q)).slice(0,80).map(c=>`<li><b>${esc(c.t)}</b> <span class="mu">${c.l}</span><span class="mu">${esc(c.d)}</span></li>`).join("")+"</ul>";
  return LEX.reduce((a,d,i,r)=>{const f=(i==0||r[i-1].l!=d.l);return a+(f?(i?"</details>":"")+`<details><summary>${d.l} (${LEX_CARDS.filter(c=>c.l==d.l).length} mots)</summary>`:"")+`<h3>${esc(d.c)||"Cours"}</h3><ul>`+d.r.map(x=>`<li><b>${esc(x[0])}</b><span class="mu">${esc(x[1])}</span></li>`).join("")+"</ul>"},"")+"</details>"}
