@@ -457,13 +457,14 @@ function fcards(){
   const cible=e.target;
   if(cible&&cible.closest&&cible.closest("input,textarea,select,[contenteditable='true']"))return;
   const espace=e.code==="Space"||e.key===" "||e.key==="Spacebar"||e.keyCode===32;
-  const droite=e.key==="ArrowRight"||e.keyCode===39;
-  const gauche=e.key==="ArrowLeft"||e.keyCode===37;
+  const droite=e.key==="ArrowRight"||e.code==="ArrowRight"||e.key==="Right"||e.keyCode===39;
+  const gauche=e.key==="ArrowLeft"||e.code==="ArrowLeft"||e.key==="Left"||e.keyCode===37;
   if(!espace&&!droite&&!gauche)return;
   e.preventDefault();
   e.stopImmediatePropagation();
   if(espace){fl=fl?0:1;}
-  else{fi=(fi+(droite?1:-1)+deck.length)%deck.length;fl=0;}
+  else if(droite){fi=(fi+1)%deck.length;fl=0;}
+  else if(gauche){fi=(fi-1+deck.length)%deck.length;fl=0;}
   fcards();
  },true);
 function lexHTML(q){q=(q||"").toLowerCase().trim();
