@@ -418,7 +418,7 @@ LEX.push(
 ["Géni(o)","Menton ; muscle génio-glosse."],["Maxill","Mâchoire ; maxillaire."],["Gnath","Mâchoire ; gnathalgie."],["Phon","Son de la voix ; phonation."],["Phasie","Affirmer, dire ; phasie, aphasie."],["Log","Dire, raconter ; logophasie, logorrhée."],["-lali","Bavarder, parler ; écholalie (écho : le son), palilalie (palin : en sens inverse ou de nouveau)."],["-phag(ie)","Manger ; phytophage (phyto : plantes)."],["-vore","Manger ; carnivore (carn : chair), piscivore (pisc : poisson)."],["Gust","Goût ; gustatif, gustation."],["Geusie","Goût ; cacogeusie (caco : mauvais)."],
 ["Pot(o)","Boire ; potomanie."],["Dips(o)","Avoir soif, boire ; dipsomanie, adipsie."],["Émét","Qui fait vomir ; substance émétique."],["Dors","Dos ; dorsal, dorsarthrose (arthro : articulation)."],["Noto","Dos ; notomèle (-mèl(o) : membre)."],["Clavicul","Clavicule (petite clé) ; claviculaire."],["Cléid","Clavicule ; muscle sterno-cléido-mastoïdien."],["Scapula","Omoplate ; omo : épaule ; plat : plat ; spathula : petite épée large et plate."],
 ["Rachi(d)","Colonne vertébrale ; canal rachidien, nerfs rachidiens."],["Spin","Colonne vertébrale ; liquide cérébro-spinal (et non céphalo-rachidien, selon le cours)."],["Médull","Moelle ; médullaire."],["Myél(o)","Moelle ; myélite, poliomyélite (polio : gris)."],["Disc(o)","Disque intervertébral ; discoïde (-oïde : qui a la forme de)."],["Spondyl","Vertèbre ; spondylodiscite."],["Vertébr","Vertèbres ; vertèbre."],["Chondr","Cartilage ; périchondre (péri : autour), chondroplastie (réparation, modelage)."],["Lomb(a)","Lombes ; lombal (= lombaire)."],["Sacrum","Os sacré, offert aux dieux lors des sacrifices ; os triangulaire entre la 5e vertèbre lombaire et le coccyx."],
-["Thorac","Thorax ; thoracotomie (-tomie : incision, ouverture chirurgicale)."],["Axill(a)","Aisselles ; axillaire."],["Pect(o)","Poitrine ; pectoral, expectorer (ex : hors de)."],["Steth(o)","Poitrine ; stéthoscope (scope : observer)."],["Sén","Sein ; sénologie."],["Mamm(o)","Sein ; mammographie, mammectomie."],["Mast(o)","Sein ; mastoïde, processus mastoïde."],["Aré","Aréole (area : surface) ; zone pigmentée du sein."],["Mamill","Mamelon ; mamillaire."],["Thél","Mamelon ; polythélie (poly : nombreux)."],["Lact","Lait ; lactifère (-fère : qui porte)."],["Galact","Lait ; galactophore (-phore : qui porte), galactopoïèse (-poïèse : fabrication, production)."],["Cost","Côtes ; costal, espace intercostal (inter : entre)."],["Chondr","Cartilage ; hypocondre (hypo : sous), périchondre (péri : autour)."]
+["Thorac","Thorax ; thoracotomie (-tomie : incision, ouverture chirurgicale)."],["Axill(a)","Aisselles ; axillaire (petit point d’articulation de l’aile)."],["Pect(o)","Poitrine ; pectoral, expectorer (ex : hors de)."],["Steth(o)","Poitrine ; stéthoscope (scope : observer)."],["Sén","Sein ; sénologie."],["Mamm(o)","Sein ; mammographie, mammectomie."],["Mast(o)","Sein ; mastoïde, processus mastoïde."],["Aré","Aréole (area : surface) ; zone pigmentée du sein."],["Mamill","Mamelon ; mamillaire."],["Thél","Mamelon ; polythélie (poly : nombreux)."],["Lact","Lait ; lactifère (-fère : qui porte)."],["Galact","Lait ; galactophore (-phore : qui porte), galactopoïèse (-poïèse : fabrication, production)."],["Cost","Côtes ; costal, espace intercostal (inter : entre)."],["Chondr","Cartilage ; hypocondre (hypo : sous), périchondre (péri : autour)."]
 ]},
 {l:"Cours n°3",c:"Cœur, vaisseaux, respiration et appareil digestif",r:[
 ["Cordi","Cœur ; précordial : situé en avant du cœur."],["Cardi","Cœur ; cardia : orifice supérieur de l’estomac à la jonction de l’œsophage ; tachycardie : accélération du rythme cardiaque ; myocarde : muscle cardiaque."],["Atri(o)","Atrium (= oreillette) ; atrial ; atrioventriculaire : relatif à l’atrium et aux ventricules."],["Ventricul","Petit ventre ; ventricule ; interventriculaire : situé entre les deux ventricules."],["Auricul(o)","Petite oreille ; auricule : diverticule qui prolonge la cavité atriale."],["Diaphragm","Diaphragme ; principal muscle de la respiration, séparant le thorax de l’abdomen ; innervé par le nerf phrénique."],["Vag","Vagabond ; nerf vague : nerf crânien dont les ramifications s’étendent jusqu’à la cavité pelvienne ; traverse le diaphragme par le hiatus œsophagien."],["Valv","Valve ; clapet empêchant le retour du sang après son éjection par le cœur."],["Apex","Pointe ; apex : pointe inférieure du cœur."],
@@ -451,17 +451,15 @@ function fcards(){
  $("#yes").onclick=()=>{kn[c.id]=1;sv();if(FM=="rev"){mk();fcards()}else go(1)};
  $("#no").onclick=()=>{kn[c.id]=0;sv();go(1)}}
 // Raccourcis clavier des flashcards : espace = retourner, flèche droite = carte suivante sans validation.
- document.addEventListener("keydown",e=>{
-  if(!$("#n3")?.classList.contains("on")||!deck.length)return;
+ window.addEventListener("keydown",e=>{
+  if(!document.getElementById("n3")?.classList.contains("on")||!deck.length)return;
   if(e.target?.matches("input,textarea,select,[contenteditable='true']"))return;
-  if(e.code==="Space"){
-   if(e.target?.closest("button,a"))return;
-   e.preventDefault();fl=fl?0:1;fcards();
+  if(e.code==="Space"||e.key===" "||e.key==="Spacebar"){
+   e.preventDefault();e.stopPropagation();fl=fl?0:1;fcards();
   }else if(e.key==="ArrowRight"){
-   if(e.target?.matches("input,textarea,select"))return;
-   e.preventDefault();fi=(fi+1)%deck.length;fl=0;fcards();
+   e.preventDefault();e.stopPropagation();fi=(fi+1)%deck.length;fl=0;fcards();
   }
- });
+ },true);
 function lexHTML(q){q=(q||"").toLowerCase().trim();
  if(q)return "<ul>"+LEX_CARDS.filter(c=>(c.t+" "+c.d).toLowerCase().includes(q)).slice(0,80).map(c=>`<li><b>${esc(c.t)}</b> <span class="mu">${c.l}</span><span class="mu">${esc(c.d)}</span></li>`).join("")+"</ul>";
  return LEX.reduce((a,d,i,r)=>{const f=(i==0||r[i-1].l!=d.l);return a+(f?(i?"</details>":"")+`<details><summary>${d.l} (${LEX_CARDS.filter(c=>c.l==d.l).length} mots)</summary>`:"")+`<h3>${esc(d.c)||"Cours"}</h3><ul>`+d.r.map(x=>`<li><b>${esc(x[0])}</b><span class="mu">${esc(x[1])}</span></li>`).join("")+"</ul>"},"")+"</details>"}
