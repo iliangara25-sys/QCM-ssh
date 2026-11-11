@@ -450,15 +450,21 @@ function fcards(){
  $("#fc").onclick=()=>{fl=!fl;fcards()};$("#nx").onclick=()=>go(1);$("#pr").onclick=()=>go(-1);
  $("#yes").onclick=()=>{kn[c.id]=1;sv();if(FM=="rev"){mk();fcards()}else go(1)};
  $("#no").onclick=()=>{kn[c.id]=0;sv();go(1)}}
-// Raccourcis clavier des flashcards : espace = retourner, flèche droite = carte suivante sans validation.
- window.addEventListener("keydown",e=>{
-  if(!document.getElementById("n3")?.classList.contains("on")||!deck.length)return;
-  if(e.target?.matches("input,textarea,select,[contenteditable='true']"))return;
-  if(e.code==="Space"||e.key===" "||e.key==="Spacebar"){
-   e.preventDefault();e.stopPropagation();fl=fl?0:1;fcards();
-  }else if(e.key==="ArrowRight"||e.key==="ArrowLeft"){
-   e.preventDefault();e.stopPropagation();fi=(fi+(e.key==="ArrowRight"?1:-1)+deck.length)%deck.length;fl=0;fcards();
-  }
+// Raccourcis clavier des flashcards (écoute globale en capture pour Safari/macOS).
+ document.addEventListener("keydown",function(e){
+  const flashcardsActives=document.querySelector("#n3.on");
+  if(!flashcardsActives||!deck||deck.length===0)return;
+  const cible=e.target;
+  if(cible&&cible.closest&&cible.closest("input,textarea,select,[contenteditable='true']"))return;
+  const espace=e.code==="Space"||e.key===" "||e.key==="Spacebar"||e.keyCode===32;
+  const droite=e.key==="ArrowRight"||e.keyCode===39;
+  const gauche=e.key==="ArrowLeft"||e.keyCode===37;
+  if(!espace&&!droite&&!gauche)return;
+  e.preventDefault();
+  e.stopImmediatePropagation();
+  if(espace){fl=fl?0:1;}
+  else{fi=(fi+(droite?1:-1)+deck.length)%deck.length;fl=0;}
+  fcards();
  },true);
 function lexHTML(q){q=(q||"").toLowerCase().trim();
  if(q)return "<ul>"+LEX_CARDS.filter(c=>(c.t+" "+c.d).toLowerCase().includes(q)).slice(0,80).map(c=>`<li><b>${esc(c.t)}</b> <span class="mu">${c.l}</span><span class="mu">${esc(c.d)}</span></li>`).join("")+"</ul>";
