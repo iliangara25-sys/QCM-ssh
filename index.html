@@ -456,8 +456,8 @@ function fcards(){
   if(e.target?.matches("input,textarea,select,[contenteditable='true']"))return;
   if(e.code==="Space"||e.key===" "||e.key==="Spacebar"){
    e.preventDefault();e.stopPropagation();fl=fl?0:1;fcards();
-  }else if(e.key==="ArrowRight"){
-   e.preventDefault();e.stopPropagation();fi=(fi+1)%deck.length;fl=0;fcards();
+  }else if(e.key==="ArrowRight"||e.key==="ArrowLeft"){
+   e.preventDefault();e.stopPropagation();fi=(fi+(e.key==="ArrowRight"?1:-1)+deck.length)%deck.length;fl=0;fcards();
   }
  },true);
 function lexHTML(q){q=(q||"").toLowerCase().trim();
