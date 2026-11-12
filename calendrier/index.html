@@ -82,6 +82,16 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 .content{max-width:1600px;margin:auto;padding:0 clamp(14px,2.5vw,34px) 42px}
 .calendar-shell{animation:panel-in .24s ease both}
 .calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;align-items:stretch}
+.week-scroll{width:100%;overflow-x:auto;overflow-y:hidden;padding:2px 2px 15px;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line) transparent;cursor:grab;outline-offset:4px}
+.week-scroll:active{cursor:grabbing}
+.week-strip{display:flex;align-items:stretch;gap:12px;width:max-content;min-width:100%;padding:0 2px 2px}
+.week-strip .day{flex:0 0 clamp(260px,23vw,310px);min-height:340px}
+.week-strip .day .task-title{font-size:11px}
+.week-strip .day .task-description{font-size:9px}
+.week-strip .day .task-card{padding:9px 9px 8px}
+.week-scroll::-webkit-scrollbar{height:9px}
+.week-scroll::-webkit-scrollbar-thumb{background:var(--line);border-radius:99px}
+.week-scroll::-webkit-scrollbar-track{background:transparent}
 .weekday{font-size:9px;font-weight:850;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:center;padding:8px 3px}
 .day{min-width:0;min-height:300px;padding:9px;background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);transition:border-color .18s,background .18s,box-shadow .18s,transform .18s}
 .day.today{border-color:color-mix(in srgb,var(--accent) 44%,var(--line));box-shadow:0 0 0 2px color-mix(in srgb,var(--accent) 8%,transparent),var(--shadow)}
@@ -161,7 +171,7 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 @keyframes panel-in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
 @keyframes placeholder-in{from{opacity:0;transform:scaleY(.6)}to{opacity:1;transform:scaleY(1)}}
 @media(max-width:1150px){.app{grid-template-columns:220px minmax(0,1fr)}.calendar{grid-template-columns:repeat(4,minmax(0,1fr))}.weekday{display:none}}
-@media(max-width:760px){.app{display:block}.sidebar-toggle{display:none}.sidebar{position:fixed;left:0;top:0;width:275px;transform:translateX(-105%);transition:transform .22s ease;box-shadow:20px 0 45px #07152c28}.sidebar.open{transform:translateX(0)}.mobile-menu{display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffffff35;border-radius:10px;background:#ffffff15;color:white;font-size:16px}.hero-top{align-items:flex-start}.hero-bottom{margin-top:15px}.hero-title{font-size:26px}.toolbar{padding-top:13px}.range-title{min-width:145px;font-size:15px}.calendar{grid-template-columns:repeat(2,minmax(0,1fr))}.day{min-height:185px}.toolbar-right{width:100%;justify-content:space-between}.progress-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.app{display:block}.week-strip .day{flex-basis:min(82vw,300px);min-height:300px}.sidebar-toggle{display:none}.sidebar{position:fixed;left:0;top:0;width:275px;transform:translateX(-105%);transition:transform .22s ease;box-shadow:20px 0 45px #07152c28}.sidebar.open{transform:translateX(0)}.mobile-menu{display:grid;place-items:center;width:34px;height:34px;border:1px solid #ffffff35;border-radius:10px;background:#ffffff15;color:white;font-size:16px}.hero-top{align-items:flex-start}.hero-bottom{margin-top:15px}.hero-title{font-size:26px}.toolbar{padding-top:13px}.range-title{min-width:145px;font-size:15px}.calendar{grid-template-columns:repeat(2,minmax(0,1fr))}.day{min-height:185px}.toolbar-right{width:100%;justify-content:space-between}.progress-grid{grid-template-columns:1fr}}
 @media(max-width:430px){.calendar{grid-template-columns:1fr}.day{min-height:0}.date-navigation{gap:5px}.date-jump{max-width:125px}.form-grid{grid-template-columns:1fr}.form-field.full{grid-column:auto}.hero-actions{width:100%}.hero-actions button{flex:1}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 </style>
@@ -256,7 +266,7 @@ const SUBJECTS = [
  {id:"ssh",label:"SSH",color:"#d69a4e"},
  {id:"other",label:"Autre",color:"#8995aa"}
 ];
-const CLASS_DAYS = new Set(["2026-11-12","2026-11-13","2026-11-17","2026-11-19","2026-11-24","2026-11-26","2026-11-30","2026-12-01","2026-12-02","2026-12-03"]);
+const CLASS_DAYS = new Set(["2026-11-12","2026-11-13","2026-11-17","2026-11-19","2026-11-20","2026-11-24","2026-11-26","2026-11-27","2026-11-30","2026-12-01","2026-12-02","2026-12-03"]);
 const $ = id => document.getElementById(id);
 const clone = value => JSON.parse(JSON.stringify(value));
 function localDate(date) {
@@ -281,7 +291,7 @@ let theme="light";
 let sidebarCollapsed=false;
 let activeFilters=new Set(SUBJECTS.map(s=>s.id));
 let history=[];
-let dragId=null,dragSourceDate=null,dropMarker=null,toastTimer=null,suppressClick=false;
+let dragId=null,dragSourceDate=null,dropMarker=null,toastTimer=null,suppressClick=false,calendarScrollTimer=null;
 function normalizeTasks(items) {
  const counters={};
  return items.filter(t=>t&&typeof t.title==="string"&&/^\d{4}-\d{2}-\d{2}$/.test(t.date)).map((t,i)=>{
@@ -298,7 +308,7 @@ function loadSavedState() {
  } catch(error){console.warn("Impossible de charger les données sauvegardées.",error);}
 }
 function persist() {
- try { localStorage.setItem(STORE_KEY,JSON.stringify({tasks,selectedDate,viewMode,theme,sidebarCollapsed})); }
+ try { localStorage.setItem(STORE_KEY,JSON.stringify({tasks,selectedDate,viewMode,theme,sidebarCollapsed,planRevision:2})); }
  catch(error){showToast("Le navigateur n'a pas pu enregistrer les modifications.");console.warn(error);}
 }
 function remember() { history.push(clone(tasks));if(history.length>60)history.shift();updateUndoButtons(); }
@@ -317,6 +327,27 @@ function applySidebarState() {
  button.setAttribute("aria-expanded",String(!sidebarCollapsed));
  button.setAttribute("aria-label",sidebarCollapsed?"Afficher la barre latérale":"Masquer la barre latérale");
  button.textContent=sidebarCollapsed?"☰ Afficher le menu":"‹ Masquer le menu";
+}
+function applyPlanRevision() {
+ let revision=0;
+ try {const saved=JSON.parse(localStorage.getItem(STORE_KEY)||"null");revision=Number(saved?.planRevision)||0;}catch(error){console.warn("Version du planning illisible.",error);}
+ if(revision>=2)return;
+ const moves=[
+  ["t0","2026-11-12","2026-11-14"],["t3","2026-11-13","2026-11-14"],
+  ["t1","2026-11-12","2026-11-17"],["t2","2026-11-12","2026-11-19"],
+  ["t6","2026-11-14","2026-11-15"],["t12","2026-11-15","2026-11-17"],
+  ["t33","2026-11-20","2026-11-26"],["t34","2026-11-20","2026-11-23"],
+  ["t35","2026-11-20","2026-11-24"],["t63","2026-11-27","2026-11-24"],
+  ["t64","2026-11-27","2026-11-28"],["t65","2026-11-27","2026-11-25"]
+ ];
+ const affected=new Set();
+ for(const [id,from,to] of moves){const task=tasks.find(item=>item.id===id);if(!task||task.date!==from)continue;affected.add(from);affected.add(to);task.date=to;task.order=Math.max(-1,...tasks.filter(item=>item.date===to&&item.id!==id).map(item=>item.order??0))+1;}
+ const lipid1=tasks.find(item=>item.id==="t0"),lipid2=tasks.find(item=>item.id==="t3"),lipidQcm=tasks.find(item=>item.id==="t12");
+ if(lipid1){lipid1.title="Biochimie — apprendre le livret de lipides n° 1";lipid1.desc="Livret difficile : prendre le temps de comprendre les structures et les notions."}
+ if(lipid2){lipid2.title="Biochimie — apprendre le livret de lipides n° 2";lipid2.desc="Livret difficile : prévoir du temps pour comprendre et revoir les classifications."}
+ if(lipidQcm)lipidQcm.title="Biochimie — QCM sur les deux livrets de lipides";
+ for(const date of affected)reindexDate(date);
+ persist();
 }
 function setTheme(next) {
  theme=next;document.documentElement.dataset.theme=theme;
@@ -445,21 +476,30 @@ function makeDayColumn(date,view) {
  day.addEventListener("drop",event=>handleDayDrop(day,event));
  return day;
 }
+function syncDateFromHorizontalScroll(scroller) {
+ clearTimeout(calendarScrollTimer);
+ calendarScrollTimer=setTimeout(()=>{
+  const bounds=scroller.getBoundingClientRect();
+  const first=[...scroller.querySelectorAll(".day")].find(day=>day.getBoundingClientRect().right>bounds.left+12);
+  if(first&&first.dataset.date){selectedDate=first.dataset.date;updateRangeTitle();persist();}
+ },110);
+}
 function renderCalendar() {
  updateRangeTitle();
  const shell=$("calendar-shell");shell.innerHTML="";
  if(viewMode==="day"){
   const wrapper=makeElement("div","daily-view");wrapper.append(makeDayColumn(selectedDate,"day"));shell.append(wrapper);
  }else{
-  const grid=makeElement("div","calendar");
-  const weekStart=mondayOf(selectedDate);
-  for(let i=0;i<7;i++){
-   const date=addDays(weekStart,i);
-   const weekday=makeElement("div","weekday",parseDate(date).toLocaleDateString("fr-FR",{weekday:"long"}));
-   grid.append(weekday);
-  }
-  for(let i=0;i<7;i++)grid.append(makeDayColumn(addDays(weekStart,i),"week"));
-  shell.append(grid);
+  const scroller=makeElement("div","week-scroll");scroller.tabIndex=0;scroller.setAttribute("role","region");
+  scroller.setAttribute("aria-label","Calendrier horizontal : faire défiler de gauche à droite pour parcourir les jours");
+  const strip=makeElement("div","week-strip");
+  const dates=tasks.map(task=>task.date).concat([selectedDate]);
+  const firstDate=dates.sort()[0],lastDate=dates[dates.length-1];
+  const start=mondayOf(firstDate),end=addDays(mondayOf(lastDate),6);
+  for(let date=start;date<=end;date=addDays(date,1))strip.append(makeDayColumn(date,"week"));
+  scroller.append(strip);shell.append(scroller);
+  scroller.addEventListener("scroll",()=>syncDateFromHorizontalScroll(scroller),{passive:true});
+  requestAnimationFrame(()=>{const target=scroller.querySelector(`.day[data-date="${selectedDate}"]`);if(target)scroller.scrollLeft=target.offsetLeft-strip.offsetLeft;});
  }
 }
 function renderProgress() {
@@ -530,6 +570,7 @@ window.addEventListener("resize",applySidebarState);
 $("mobile-menu").addEventListener("click",()=>$("sidebar").classList.toggle("open"));
 $("calendar-actions").hidden=false;
 loadSavedState();
+applyPlanRevision();
 applySidebarState();
 const today=localDate(new Date());
 if(today>selectedDate&&today<"2026-12-04")selectedDate=today;
