@@ -289,6 +289,7 @@ let viewMode="week";
 let activePanel="calendar";
 let theme="light";
 let sidebarCollapsed=false;
+let planRevision=0;
 let activeFilters=new Set(SUBJECTS.map(s=>s.id));
 let history=[];
 let dragId=null,dragSourceDate=null,dropMarker=null,toastTimer=null,suppressClick=false,calendarScrollTimer=null;
@@ -303,12 +304,12 @@ function normalizeTasks(items) {
 function loadSavedState() {
  try {
   const current=localStorage.getItem(STORE_KEY);
-  if(current){const parsed=JSON.parse(current);if(Array.isArray(parsed.tasks))tasks=normalizeTasks(parsed.tasks);if(parsed.selectedDate)selectedDate=parsed.selectedDate;if(parsed.viewMode==="day"||parsed.viewMode==="week")viewMode=parsed.viewMode;if(parsed.theme==="dark"||parsed.theme==="light")theme=parsed.theme;if(typeof parsed.sidebarCollapsed==="boolean")sidebarCollapsed=parsed.sidebarCollapsed;return;}
+  if(current){const parsed=JSON.parse(current);if(Array.isArray(parsed.tasks))tasks=normalizeTasks(parsed.tasks);if(parsed.selectedDate)selectedDate=parsed.selectedDate;if(parsed.viewMode==="day"||parsed.viewMode==="week")viewMode=parsed.viewMode;if(parsed.theme==="dark"||parsed.theme==="light")theme=parsed.theme;if(typeof parsed.sidebarCollapsed==="boolean")sidebarCollapsed=parsed.sidebarCollapsed;planRevision=Number(parsed.planRevision)||0;return;}
   for(const key of OLD_KEYS){const old=localStorage.getItem(key);if(old){const parsed=JSON.parse(old);if(Array.isArray(parsed.tasks)){tasks=normalizeTasks(parsed.tasks);break;}}}
  } catch(error){console.warn("Impossible de charger les données sauvegardées.",error);}
 }
 function persist() {
- try { localStorage.setItem(STORE_KEY,JSON.stringify({tasks,selectedDate,viewMode,theme,sidebarCollapsed,planRevision:2})); }
+ try { localStorage.setItem(STORE_KEY,JSON.stringify({tasks,selectedDate,viewMode,theme,sidebarCollapsed,planRevision})); }
  catch(error){showToast("Le navigateur n'a pas pu enregistrer les modifications.");console.warn(error);}
 }
 function remember() { history.push(clone(tasks));if(history.length>60)history.shift();updateUndoButtons(); }
@@ -331,7 +332,7 @@ function applySidebarState() {
 function applyPlanRevision() {
  let revision=0;
  try {const saved=JSON.parse(localStorage.getItem(STORE_KEY)||"null");revision=Number(saved?.planRevision)||0;}catch(error){console.warn("Version du planning illisible.",error);}
- if(revision>=2)return;
+ planRevision=revision;if(revision>=2)return;
  const moves=[
   ["t0","2026-11-12","2026-11-14"],["t3","2026-11-13","2026-11-14"],
   ["t1","2026-11-12","2026-11-17"],["t2","2026-11-12","2026-11-19"],
@@ -347,7 +348,54 @@ function applyPlanRevision() {
  if(lipid2){lipid2.title="Biochimie — apprendre le livret de lipides n° 2";lipid2.desc="Livret difficile : prévoir du temps pour comprendre et revoir les classifications."}
  if(lipidQcm)lipidQcm.title="Biochimie — QCM sur les deux livrets de lipides";
  for(const date of affected)reindexDate(date);
- persist();
+ planRevision=2;persist();
+}
+function applySshPlanRevision() {
+ if(planRevision>=3)return;
+ const affected=new Set();
+ const schedule=[
+  ["t2","2026-11-13",40,"SSH — revoir le cours n° 1","Reprendre le cours, vérifier que tu comprends chaque partie, puis restituer le plan sans support."],
+  ["t4","2026-11-13",40,"SSH — revoir le cours n° 2 (si temps)","Séance facultative après le cours n° 1 : comprendre les notions principales et repérer ce qui reste flou."],
+  ["t1","2026-11-13",75,"SSH — apprendre les termes sémantiques 1 à 50","Apprentissage actif des 50 premiers termes : définition, restitution sans support, puis vérification."],
+  ["t8","2026-11-14",60,"SSH — apprendre les termes sémantiques 51 à 90","Apprendre 40 nouveaux termes, puis les restituer sans regarder le cours."],
+  ["t5","2026-11-14",20,"SSH — rappel des termes 1 à 50","Essayer de retrouver les définitions de mémoire avant de vérifier."],
+  ["t9","2026-11-15",60,"SSH — apprendre les termes sémantiques 91 à 130","Apprendre 40 nouveaux termes par récupération active."],
+  ["t14","2026-11-15",20,"SSH — rappel des termes 51 à 90","Rappel actif du groupe appris la veille."],
+  ["t13","2026-11-16",60,"SSH — apprendre les termes sémantiques 131 à 170","Apprendre 40 nouveaux termes, puis vérifier la restitution."],
+  ["t18","2026-11-16",20,"SSH — rappel des termes 91 à 130","Rappel actif du groupe appris la veille."],
+  ["t17","2026-11-17",45,"SSH — apprendre les termes sémantiques 171 à 202","Dernier groupe : apprendre les 32 derniers termes et vérifier les définitions."],
+  ["t20","2026-11-17",20,"SSH — rappel des termes 1 à 170","Test mélangé des groupes déjà étudiés, en priorité les définitions hésitantes."],
+  ["t26","2026-11-18",45,"SSH — test mélangé des 202 termes","Retrouver les définitions sans support, puis reprendre les termes oubliés."],
+  ["t27","2026-11-18",45,"SSH — restituer les cours 1 et 2","Reconstituer les idées essentielles des deux cours de mémoire, puis vérifier les oublis."],
+  ["t30","2026-11-19",30,"SSH — révision ciblée des termes difficiles","Revoir en priorité les mots non retrouvés lors du test mélangé."],
+  ["t35","2026-11-20",30,"SSH — rappel espacé des 202 termes","Test rapide sans support, puis correction des erreurs."],
+  ["t39","2026-11-21",45,"SSH — revoir les cours 1 et 2","Restitution active des notions principales et clarification des passages fragiles."],
+  ["t41","2026-11-21",30,"SSH — rappel des termes 1 à 202","Test mélangé, sans commencer par relire les définitions."],
+  ["t46","2026-11-22",35,"SSH — révision espacée des 202 termes","Test complet et reprise ciblée des termes les moins sûrs."],
+  ["t50","2026-11-23",45,"SSH — restitution des cours 1 et 2","Reconstituer les plans et notions essentielles sans le support."],
+  ["t21","2026-11-24",25,"SSH — rappel ciblé des termes","Reprendre les termes ratés lors des révisions précédentes."],
+  ["t52","2026-11-24",30,"SSH — révision mélangée des 202 termes","Test rapide de l’ensemble du lexique et correction."],
+  ["t65","2026-11-25",30,"SSH — rappel espacé des termes","Récupérer les définitions de mémoire, puis vérifier."],
+  ["t60","2026-11-26",30,"SSH — révision espacée des 202 termes","Test mélangé en temps limité, avec reprise des erreurs."],
+  ["t61","2026-11-26",15,"SSH — rappel léger des cours 1 et 2","Rappeler les grandes idées sans relire l’intégralité des cours."],
+  ["t69","2026-11-28",60,"SSH — test complet des 202 termes","Faire un test global, puis apprendre à nouveau les termes fragiles."],
+  ["t76","2026-11-30",40,"SSH — révision espacée des 202 termes","Test complet et correction des termes encore hésitants."],
+  ["t77","2026-11-30",20,"SSH — restitution des cours 1 et 2","Rappel des deux cours sans support."],
+  ["t80","2026-12-01",30,"SSH — rappel des termes difficiles","Revoir uniquement les définitions qui résistent encore."],
+  ["t83","2026-12-02",60,"SSH — dernier test global des 202 termes","Test complet, puis revoir seulement les erreurs."],
+  ["t86","2026-12-03",20,"SSH — rappel léger des termes difficiles","Dernier rappel sans séance lourde : se concentrer sur les mots fragiles."]
+ ];
+ for(const [id,date,minutes,title,desc] of schedule){
+  const task=tasks.find(item=>item.id===id);if(!task)continue;
+  affected.add(task.date);affected.add(date);task.date=date;task.minutes=minutes;task.title=title;task.desc=desc;task.done=false;
+ }
+ for(const date of affected)reindexDate(date);
+ planRevision=3;persist();
+}
+function shouldHidePastDay(date) {
+ if(date>=localDate(new Date()))return false;
+ const dayTasks=sortedTasks(date);
+ return dayTasks.length===0||dayTasks.every(task=>task.done);
 }
 function setTheme(next) {
  theme=next;document.documentElement.dataset.theme=theme;
@@ -496,7 +544,7 @@ function renderCalendar() {
   const dates=tasks.map(task=>task.date).concat([selectedDate]);
   const firstDate=dates.sort()[0],lastDate=dates[dates.length-1];
   const start=mondayOf(firstDate),end=addDays(mondayOf(lastDate),6);
-  for(let date=start;date<=end;date=addDays(date,1))strip.append(makeDayColumn(date,"week"));
+  for(let date=start;date<=end;date=addDays(date,1)){if(!shouldHidePastDay(date))strip.append(makeDayColumn(date,"week"));}
   scroller.append(strip);shell.append(scroller);
   scroller.addEventListener("scroll",()=>syncDateFromHorizontalScroll(scroller),{passive:true});
   requestAnimationFrame(()=>{const target=scroller.querySelector(`.day[data-date="${selectedDate}"]`);if(target)scroller.scrollLeft=target.offsetLeft-strip.offsetLeft;});
@@ -571,6 +619,7 @@ $("mobile-menu").addEventListener("click",()=>$("sidebar").classList.toggle("ope
 $("calendar-actions").hidden=false;
 loadSavedState();
 applyPlanRevision();
+applySshPlanRevision();
 applySidebarState();
 const today=localDate(new Date());
 if(today>selectedDate&&today<"2026-12-04")selectedDate=today;
