@@ -387,7 +387,7 @@ function applySshPlanRevision() {
  ];
  for(const [id,date,minutes,title,desc] of schedule){
   const task=tasks.find(item=>item.id===id);if(!task)continue;
-  affected.add(task.date);affected.add(date);task.date=date;task.minutes=minutes;task.title=title;task.desc=desc;task.done=false;
+  affected.add(task.date);affected.add(date);task.date=date;task.minutes=minutes;task.title=title;task.desc=desc;
  }
  for(const date of affected)reindexDate(date);
  planRevision=3;persist();
@@ -444,7 +444,7 @@ function makeTaskCard(task) {
  const top=makeElement("div","task-top");
  const check=document.createElement("input");check.type="checkbox";check.className="task-check";check.checked=!!task.done;check.setAttribute("aria-label","Marquer comme terminé");
  check.addEventListener("click",event=>event.stopPropagation());
- check.addEventListener("change",event=>{event.stopPropagation();remember();task.done=check.checked;card.classList.toggle("done",task.done);persist();if(activePanel==="progress")renderProgress();});
+ check.addEventListener("change",event=>{event.stopPropagation();remember();task.done=check.checked;card.classList.toggle("done",task.done);persist();if(task.done&&task.date<localDate(new Date())){const remaining=sortedTasks(task.date).filter(item=>!item.done);if(!remaining.length){const day=card.closest(".day");if(day)day.remove();}}if(activePanel==="progress")renderProgress();});
  const title=makeElement("div","task-title",task.title);
  top.append(check,title);card.append(top);
  const meta=makeElement("div","task-meta");
