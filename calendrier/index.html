@@ -392,6 +392,24 @@ function applySshPlanRevision() {
  for(const date of affected)reindexDate(date);
  planRevision=3;persist();
 }
+function applyBiochimiePlanRevision() {
+ if(planRevision>=4)return;
+ const affected=new Set();
+ const updateTask=(id,date,minutes,title,desc)=>{
+  const task=tasks.find(item=>item.id===id);if(!task)return;
+  affected.add(task.date);affected.add(date);
+  task.date=date;task.minutes=minutes;task.title=title;task.desc=desc;
+ };
+ updateTask("t10","2026-11-14",90,"Biochimie — apprendre le cours sur les glucides n° 1","Cours à comprendre et apprendre ce samedi, avec restitution des notions essentielles.");
+ updateTask("t19","2026-11-15",90,"Biochimie — apprendre le cours sur les glucides n° 2","Deuxième cours de glucides : apprendre les notions et vérifier la compréhension.");
+ updateTask("t0","2026-11-16",120,"Biochimie — apprendre le cours sur les lipides n° 1","Cours reporté après le week-end consacré aux glucides. Prendre le temps de comprendre les structures et les notions.");
+ updateTask("t3","2026-11-17",120,"Biochimie — apprendre le cours sur les lipides n° 2","Deuxième cours de lipides, reporté à la semaine prochaine. Revoir les classifications et les notions difficiles.");
+ updateTask("t12","2026-11-19",90,"Biochimie — QCM sur les deux cours de lipides","À faire après l'apprentissage des deux cours de lipides.");
+ updateTask("t22","2026-11-19",45,"Biophysique théorique — réciter les deux cours","Restitution de mémoire et repérage des éléments fragiles. Pas d'annales aujourd'hui.");
+ updateTask("t23","2026-11-24",90,"Biochimie — QCM complémentaire sur les deux cours de lipides","Deuxième séance de QCM après l'apprentissage des deux cours.");
+ for(const date of affected)reindexDate(date);
+ planRevision=4;persist();
+}
 function shouldHidePastDay(date) {
  if(date>=localDate(new Date()))return false;
  const dayTasks=sortedTasks(date);
@@ -620,6 +638,7 @@ $("calendar-actions").hidden=false;
 loadSavedState();
 applyPlanRevision();
 applySshPlanRevision();
+applyBiochimiePlanRevision();
 applySidebarState();
 const today=localDate(new Date());
 if(today>selectedDate&&today<"2026-12-04")selectedDate=today;
